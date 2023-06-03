@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-import { jokes } from '../../jokes';
 
 export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
   const [likeUp, setLike] = useState(likes);
@@ -14,20 +13,12 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
     setLikeDown(likeDown + 1);
   };
 
-  jokes.map(({ userAvatar, userName, text, likes, dislikes }) => {
-    userAvatar = { avatar };
-    userName = { userName };
-    text = { text };
-    likes = { likes };
-    dislikes = { dislikes };
-  });
-
   return (
     <div className="container">
       <div className="joke">
         <div className="joke__body">
           <div className="joke__user">
-            <img class="user-avatar" src={userAvatar} />
+            <img className="user-avatar" src={userAvatar} />
             <p className="user-name">{userName}</p>
           </div>
 
