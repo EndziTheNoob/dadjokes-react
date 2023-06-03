@@ -1,14 +1,18 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
-import { Jokes } from './components/Jokes/index.jsx';
-import { Likes } from './components/Likes/index.jsx';
+import { Joke } from './components/Joke/index.jsx';
 
 const App = () => {
   return (
     <div className="container">
-      <Jokes />
-      <Likes />
+      <Joke
+        userAvatar={avatar}
+        userName={name}
+        text={text}
+        likes={likes}
+        dislikes={dislikes}
+      />
     </div>
   );
 };
